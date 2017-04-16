@@ -8,10 +8,7 @@ module.exports = {
     this._super.included(app);
 
     // Lodash
-    app.import({
-      development: app.bowerDirectory + '/lodash/lodash.js',
-      production:  app.bowerDirectory + '/lodash/dist/lodash.min.js'
-    });
+    app.import(app.bowerDirectory + '/lodash/dist/lodash.min.js');
 
     // JQuery UI
     ['core', 'widget', 'mouse', 'draggable', 'resizable'].forEach(function(module) {
